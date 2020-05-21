@@ -1,6 +1,6 @@
 (function() {
   if (typeof process === 'object') {
-    require('mocha-jsdom')();
+    require('jsdom-global')()
   }
 
   var root = this;
