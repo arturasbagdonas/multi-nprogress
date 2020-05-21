@@ -172,11 +172,14 @@ nprogress.configure({ showSpinner: false });
 ~~~
 
 #### `parent`
-Specify this to change the parent container. (default: `body`)
+Specify this to change the parent container. (default: `body`).
 Can either specify a query selector (`#id`, `.class`, `tag`) or an `HTMLElement` directly.
 
 ~~~ js
 nprogress.configure({ parent: '#container' });
+// OR
+var elt = document.getElementById('#container')
+nprogress.configure({ parent: elt });
 ~~~
 
 Also this is useful when you want to have multi progress bar in your page you need to give different parent for each

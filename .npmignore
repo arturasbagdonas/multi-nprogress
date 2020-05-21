@@ -1,2 +1,7 @@
 index.html
 support
+test
+.travis.yml
+*.md
+bower.json
+components.json
