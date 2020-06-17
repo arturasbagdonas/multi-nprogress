@@ -224,7 +224,7 @@
     var parent = NProgress.getParent();
     // if the parent contains nested NProgress instances, select just the direct child
     if (parent) {
-      var elements = Array.prototype.slice.call(parent.querySelectorAll('.nprogress')).filter(p => p.parentElement === parent);
+      var elements = Array.prototype.slice.call(parent.querySelectorAll('.nprogress')).filter(function (p) { return p.parentElement === parent});
       if (elements.length > 0) {
         return elements[0];
       }
