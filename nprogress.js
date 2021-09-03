@@ -23,6 +23,7 @@
     speed: 200,
     trickle: true,
     trickleSpeed: 200,
+    removeAfterFinished: true,
     showSpinner: true,
     barSelector: '[role="bar"]',
     spinnerSelector: '[role="spinner"]',
@@ -81,6 +82,9 @@
       css(bar, barPositionCSS(n, speed, ease));
 
       if (n === 1) {
+        if (!Settings.removeAfterFinished) {
+          return;
+        }
         // Fade out
         css(progress, {
           transition: 'none',
